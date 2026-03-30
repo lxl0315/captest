@@ -33,7 +33,7 @@ public class PointRuleController {
     }
 
     @DeleteMapping
-    public Result<String> deletePointRuleByID(@RequestBody Integer ruleId){
+    public Result<String> deletePointRuleByID(@PathVariable Integer ruleId){
         pointRuleService.deletePointRuleByID(ruleId);
         return ResultUtil.success("删除成功");
     }

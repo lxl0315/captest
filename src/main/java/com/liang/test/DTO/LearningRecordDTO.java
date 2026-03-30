@@ -1,12 +1,11 @@
-package com.liang.test.Entity;
+package com.liang.test.DTO;
 
 import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-
 @Data
-public class LearningRecord {
+public class LearningRecordDTO {
     private Integer recordId;
     private String employeeId;
     private String employeeName;
@@ -15,5 +14,4 @@ public class LearningRecord {
     private BigDecimal learningHours;
     private LocalDate completedDate;
     private BigDecimal awardedPoints;
-
 }
