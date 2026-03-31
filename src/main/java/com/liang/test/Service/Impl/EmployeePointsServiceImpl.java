@@ -66,17 +66,3 @@ public class EmployeePointsServiceImpl extends ServiceImpl<EmployeePointsMapper,
 
 
 
-
-
-
-
-//        List<Map<String,Object>> pointList=learningRecordMapper.selectMaps(new QueryWrapper<LearningRecord>()
-//                .select("point_rule_id","SUM(awarded_points) AS total_points")
-//                .eq("employeeId",employeeId)
-//                .groupBy("point_rule_id")
-//        );
-//        List<EmployeePointsDTO> learnPointList=new ArrayList<>();
-//        for (Map<String,Object> item:pointList) {
-//            Integer pointRuleId=Integer.valueOf(item.get("point_rule_id").toString());
-//            BigDecimal totalPoints=new BigDecimal(item.get("total_points").toString());
-
