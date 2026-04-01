@@ -1,16 +1,14 @@
 package com.liang.test.Service.Impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.liang.test.DTO.EmployeePointsDTO;
-import com.liang.test.DTO.LearningRecordDTO;
 import com.liang.test.Entity.EmployeePoints;
 import com.liang.test.Entity.LearningRecord;
 import com.liang.test.Entity.PointRule;
-import com.liang.test.Mapper.EmployeePointsMapper;
-import com.liang.test.Mapper.LearningRecordMapper;
-import com.liang.test.Mapper.PointRuleMapper;
+import com.liang.test.mapper.EmployeePointsMapper;
+import com.liang.test.mapper.LearningRecordMapper;
+import com.liang.test.mapper.PointRuleMapper;
 import com.liang.test.Service.EmployeePointsService;
 import com.liang.test.VO.EmployeePointsQueryVO;
 import org.springframework.beans.factory.annotation.Autowired;

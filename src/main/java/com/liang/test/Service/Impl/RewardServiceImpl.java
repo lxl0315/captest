@@ -3,7 +3,7 @@ package com.liang.test.Service.Impl;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.liang.test.Entity.Reward;
-import com.liang.test.Mapper.RewardMapper;
+import com.liang.test.mapper.RewardMapper;
 import com.liang.test.Service.RewardService;
 import org.springframework.stereotype.Service;
 
