@@ -2,6 +2,7 @@ package com.liang.test.Controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.liang.test.DTO.PointRuleDTO;
+import com.liang.test.DTO.RewardQueryDTO;
 import com.liang.test.Entity.PointRule;
 import com.liang.test.Entity.Reward;
 import com.liang.test.Service.RewardService;
@@ -22,8 +23,8 @@ public class RewardController {
     }
 
     @GetMapping
-    public Result<Page<Reward>> queryReward(Reward reward){
-        return ResultUtil.success(rewardService.queryReward(reward));
+    public Result<Page<Reward>> queryReward(RewardQueryDTO dto){
+        return ResultUtil.success(rewardService.queryReward(dto));
     }
     @PutMapping
     public Result<String> updateReward(@RequestBody Reward reward){

@@ -25,11 +25,12 @@ import java.util.List;
 public class LearningRecordServiceImpl extends ServiceImpl<LearningRecordMapper, LearningRecord> implements LearningRecordService {
     @Autowired
     private PointRuleMapper pointRuleMapper;
+    @Autowired
     private EmployeePointsMapper employeePointsMapper;
     @Override
     public void createLearningRecord(LearningRecordDTO dto) {
         PointRule pointRule=pointRuleMapper.selectById(dto.getPointRuleId());
-        if (pointRule==null||Boolean.TRUE.equals(pointRule.getDeleted())){
+        if (pointRule==null){
             throw new RuntimeException("不存在或被删除");
         }
         if (pointRule.getIsActive()!=1){

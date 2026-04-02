@@ -2,6 +2,7 @@ package com.liang.test.Service.Impl;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.liang.test.DTO.RewardQueryDTO;
 import com.liang.test.Entity.Reward;
 import com.liang.test.mapper.RewardMapper;
 import com.liang.test.Service.RewardService;
@@ -15,8 +16,8 @@ public class RewardServiceImpl extends ServiceImpl<RewardMapper, Reward> impleme
     }
 
     @Override
-    public Page<Reward> queryReward(Reward reward) {
-        return this.page(new Page<>(reward.getPageNum(), reward.getPageSize()));
+    public Page<Reward> queryReward(RewardQueryDTO dto) {
+        return this.page(new Page<>(dto.getPageNum(), dto.getPageSize()));
     }
 
     @Override

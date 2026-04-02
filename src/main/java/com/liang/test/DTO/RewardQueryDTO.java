@@ -1,13 +1,11 @@
-package com.liang.test.Entity;
+package com.liang.test.DTO;
 
-import com.liang.test.DTO.PageDTO;
 import lombok.Data;
 
 import java.math.BigDecimal;
 
 @Data
-public class Reward {
-    private Integer rewardId;
+public class RewardQueryDTO extends PageDTO {
     private String rewardName;
     private BigDecimal requiredPoints;
     private Integer rewardQuantity;

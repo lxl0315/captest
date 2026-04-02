@@ -57,7 +57,7 @@ public class PointRuleServiceImpl extends ServiceImpl<PointRuleMapper, PointRule
             throw new RuntimeException("规则ID不能为空");
         }
         PointRule pointRule=this.getById(dto.getRuleId());
-        if (pointRule==null||Boolean.TRUE.equals(pointRule.getDeleted())){
+        if (pointRule==null){
             throw new RuntimeException("该规则不存在或被删除");
         }
         pointRule.setBasePoint(dto.getBasePoint());
@@ -74,7 +74,7 @@ public class PointRuleServiceImpl extends ServiceImpl<PointRuleMapper, PointRule
             throw new RuntimeException("规则ID不能为空");
         }
         PointRule pointRule=this.getById(ruleId);
-        if (pointRule==null||Boolean.TRUE.equals(pointRule.getDeleted())){
+        if (pointRule==null){
             throw new RuntimeException("该规则不存在或被删除");
         }
         Long record=learningRecordMapper.selectCount(new LambdaQueryWrapper<LearningRecord>()
